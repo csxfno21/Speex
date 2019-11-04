@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.0" }
 
-  spec.source_files  = "Classes", "Classes/*"
-
+  spec.source_files  = "Classes", "Classes/**/*.h"
+  spec.vendored_frameworks = "libogg.a","libspeex.a","libspeexdsp.a"
 
 end
