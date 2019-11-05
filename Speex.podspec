@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Speex"
-  s.version      = '0.1.2'
+  s.version      = '0.1.3'
   s.summary      = "A short description of speexPodSpec."
 
   s.description  = <<-DESC
@@ -26,22 +26,21 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.2" }
+  s.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.3" }
 
   s.vendored_libraries = "lib/*.a"
   s.source_files  = "Classes/*.h"
   
 
-  s.subspec 'ogg' do |o|
-    o.source_files = 'Classes/ogg/*.h'
+  s.subspec 'libogg' do |t|
+    t.source_files = 'Classes/libogg/.c'
+    t.subspec 'ogg' do |o|
+       o.source_files = 'Classes/libogg/ogg/.h'
+    end
   end
 
-  s.subspec 'speex' do |spx|
-    spx.source_files = 'Classes/speex/*.h'
-  end
-
-  s.subspec 'speexdsp' do |spxd|
-    spxd.source_files = 'Classes/speexdsp/*.h'
+  s.subspec 'libspeex' do |spx|
+    spx.source_files = 'Classes/libspeex/*'
   end
 
 end
