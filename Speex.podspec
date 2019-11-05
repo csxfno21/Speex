@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.1" }
 
   s.vendored_libraries = "lib/*.a"
-  s.source_files  = "*.h"
+  s.source_files  = "Classes/*.h"
   
 
   s.subspec 'ogg' do |o|
