@@ -6,29 +6,42 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
-  spec.name         = "Speex"
-  spec.version      = '0.1.1'
-  spec.summary      = "A short description of speexPodSpec."
+  s.name         = "Speex"
+  s.version      = '0.1.1'
+  s.summary      = "A short description of speexPodSpec."
 
-  spec.description  = <<-DESC
+  s.description  = <<-DESC
                       speex
                    DESC
 
-  spec.homepage     = "https://github.com/csxfno21/Speex"
+  s.homepage     = "https://github.com/csxfno21/Speex"
 
 
   # spec.license      = "MIT (example)"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
-  spec.author             = { "shuaiwang" => "csxfno21@163.com" }
+  s.author             = { "shuaiwang" => "csxfno21@163.com" }
 
-  spec.platform     = :ios, "8.0"
+  s.platform     = :ios, "8.0"
 
-  spec.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.1" }
+  s.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.1" }
 
-  spec.source_files  = "Classes", "Classes/**/*.h"
-  spec.vendored_libraries = "lib/*.a"
+  s.vendored_libraries = "lib/*.a"
+  s.source_files  = "*.h"
+  
+
+  s.subspec 'ogg' do |o|
+    o.source_files = 'Classes/ogg/*.h'
+  end
+
+  s.subspec 'speex' do |spx|
+    spx.source_files = 'Classes/speex/*.h'
+  end
+
+  s.subspec 'speexdsp' do |spxd|
+    spxd.source_files = 'Classes/speexdsp/*.h'
+  end
 
 end
