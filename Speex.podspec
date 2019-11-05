@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Speex"
-  spec.version      = '0.1.0'
+  spec.version      = '0.1.1'
   spec.summary      = "A short description of speexPodSpec."
 
   spec.description  = <<-DESC
@@ -26,9 +26,9 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "8.0"
 
-  spec.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.0" }
+  spec.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.1" }
 
   spec.source_files  = "Classes", "Classes/**/*.h"
-  spec.vendored_libraries = "FrameWorks/*.a"
+  spec.vendored_libraries = "lib/*.a"
 
 end
