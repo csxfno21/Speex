@@ -28,19 +28,19 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/csxfno21/Speex", :branch => "0.1.3" }
 
-  s.vendored_libraries = "lib/*.a"
-  s.source_files  = "Classes/*.h"
+  # s.vendored_libraries = "lib/*.a"
+  s.source_files  = "Classes/**/*"
   
 
-  s.subspec 'libogg' do |t|
-    t.source_files = 'Classes/libogg/.c'
-    t.subspec 'ogg' do |o|
-       o.source_files = 'Classes/libogg/ogg/.h'
-    end
-  end
+  # s.subspec 'libogg' do |t|
+  #   t.source_files = 'Classes/libogg/.c'
+  #   t.subspec 'ogg' do |o|
+  #      o.source_files = 'Classes/libogg/ogg/.h'
+  #   end
+  # end
 
-  s.subspec 'libspeex' do |spx|
-    spx.source_files = 'Classes/libspeex/*'
-  end
+  # s.subspec 'libspeex' do |spx|
+  #   spx.source_files = 'Classes/libspeex/*'
+  # end
 
 end
